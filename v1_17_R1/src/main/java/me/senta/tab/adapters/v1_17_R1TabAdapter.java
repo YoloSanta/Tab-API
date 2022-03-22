@@ -26,7 +26,7 @@ import org.bukkit.entity.Player;
 import java.lang.reflect.Field;
 import java.util.*;
 
-public class v1_17_R4TabAdapter extends TabAdapter {
+public class v1_17_R1TabAdapter extends TabAdapter {
 
     private final Map<Player, GameProfile[]> profiles = new HashMap<>();
     private final List<Player> initialized = new ArrayList<>();
