@@ -67,6 +67,7 @@ public class TabHandler {
         try {
             return (TabAdapter) Class.forName(disguisePackage + "TabAdapter").newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+            System.out.println("Could not find class `" + disguisePackage + "TabAdapter" + "`");
             e.printStackTrace();
         }
         return null;

@@ -11,6 +11,10 @@ import org.bukkit.scoreboard.Team;
 
 public abstract class TabAdapter {
 
+    public TabAdapter() {
+        System.out.println("Using NMS class `" + getClass().getSimpleName() + "`");
+    }
+
     /**
      * Setup the profiles of the tab adapter
      */

@@ -336,4 +336,6 @@ public class v1_8_R1TabAdapter extends TabAdapter {
     private EntityPlayer getEntityPlayer(Player player) {
         return ((CraftPlayer) player).getHandle();
     }
+
+
 }
