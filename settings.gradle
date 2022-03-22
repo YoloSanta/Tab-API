@@ -1,4 +1,5 @@
 rootProject.name = 'Tab-API'
+
 include 'common'
 include 'v1_7_R4'
 include 'v1_8_R1'
@@ -12,5 +13,5 @@ include 'v1_14_R1'
 include 'v1_15_R1'
 include 'v1_16_R1'
 include 'v1_16_R3'
-//include 'v1_17_R1' Work in progress
-//include 'v1_18_R1' Work in progress
+include 'v1_17_R1'
+include 'v1_18_R1'

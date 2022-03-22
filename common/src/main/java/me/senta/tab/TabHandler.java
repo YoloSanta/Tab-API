@@ -59,17 +59,12 @@ public class TabHandler {
      * @throws IllegalAccessException thrown if the instantiation was invoked from an illegal instance
      * @throws InstantiationException thrown if something went wrong during class instantiation
      */
-    private TabAdapter createAdapter() {
+    private TabAdapter createAdapter() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         final String serverPackage = Bukkit.getServer().getClass().getPackage().getName();
         final String nmsVersion = serverPackage.replace(".", ",").split(",")[3].substring(1);
-        final String disguisePackage = "me.senta.tab.adapters.v" + nmsVersion.toLowerCase() + ".v" + nmsVersion;
+        final String disguisePackage = "me.senta.tab.adapters.v" + nmsVersion;
 
-        try {
-            return (TabAdapter) Class.forName(disguisePackage + "TabAdapter").newInstance();
-        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
+        return (TabAdapter) Class.forName(disguisePackage + "TabAdapter").newInstance();
     }
 
     /**

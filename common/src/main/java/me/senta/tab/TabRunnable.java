@@ -1,7 +1,6 @@
 package me.senta.tab;
 
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class TabRunnable extends BukkitRunnable {
@@ -19,8 +18,6 @@ public class TabRunnable extends BukkitRunnable {
 
     @Override
     public void run() {
-        for (Player player : Bukkit.getOnlinePlayers()) {
-            this.handler.sendUpdate(player);
-        }
+        Bukkit.getOnlinePlayers().forEach(handler::sendUpdate);
     }
 }
