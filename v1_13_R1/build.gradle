@@ -1,0 +1,31 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+    id 'java'
+    id 'idea'
+    id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version "1.6.10"
+}
+
+dependencies {
+    implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10')
+    implementation project(':common')
+    implementation(fileTree(dir: 'libs', include: '*.jar'))
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    minimize()
+}
+
+publishing {
+    publications {
+        shadow(MavenPublication) { publication ->
+            project.shadow.component(publication)
+        }
+    }
+}
+processResources {
+    filter ReplaceTokens, tokens: ["plugin.version": project.version]
+}
