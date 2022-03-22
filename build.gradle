@@ -9,5 +9,6 @@ allprojects {
         maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
         maven { url = 'https://jitpack.io' }
         maven { url = 'https://repo.viaversion.com' }
+        maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
     }
 }

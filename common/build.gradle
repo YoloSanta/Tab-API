@@ -12,6 +12,9 @@ dependencies {
     implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10')
     implementation('com.viaversion:viaversion-api:4.2.2-SNAPSHOT')
     implementation(fileTree(dir: 'libs', include: '*.jar'))
+
+    implementation('org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT')
+    implementation('org.projectlombok:lombok:1.18.22')
 }
 
 shadowJar {
