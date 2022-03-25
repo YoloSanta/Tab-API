@@ -5,13 +5,11 @@ plugins {
     id 'java'
     id 'idea'
     id 'maven-publish'
-    id 'org.jetbrains.kotlin.jvm' version "1.6.10"
 }
 
 dependencies {
-    implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10')
     implementation project(':common')
-    implementation(fileTree(dir: 'libs', include: '*.jar'))
+    compileOnly(fileTree(dir: 'libs', include: '*.jar'))
 }
 
 shadowJar {

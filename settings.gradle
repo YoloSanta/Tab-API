@@ -2,7 +2,7 @@ rootProject.name = 'Tab-API'
 
 include 'common'
 include 'v1_7_R4'
-include 'v1_8_R1'
+//include 'v1_8_R1'
 include 'v1_8_R3'
 include 'v1_9_R1'
 include 'v1_10_R1'
