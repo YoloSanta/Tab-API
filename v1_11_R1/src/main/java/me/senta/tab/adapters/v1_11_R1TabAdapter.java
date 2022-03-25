@@ -79,7 +79,7 @@ public class v1_11_R1TabAdapter extends TabAdapter {
 
         skinData = skinData != null && skinData.length >= 1 && !skinData[0].isEmpty() && !skinData[1].isEmpty()
                 ? skinData
-                : SkinType.DARK_GRAY.getSkinData();
+                : SkinType.QUESTION_MARK.getSkinData();
 
         if (!property.getSignature().equals(skinData[1]) || !property.getValue().equals(skinData[0])) {
             profile.getProperties().remove("textures", property);
@@ -300,7 +300,7 @@ public class v1_11_R1TabAdapter extends TabAdapter {
 
         if (this.profiles.get(player).length < index + 1 || this.profiles.get(player)[index] == null) {
             final GameProfile profile = new GameProfile(UUID.randomUUID(), text);
-            final String[] skinData = SkinType.DARK_GRAY.getSkinData();
+            final String[] skinData = SkinType.QUESTION_MARK.getSkinData();
 
             profile.getProperties().put("textures", new Property("textures", skinData[0], skinData[1]));
 
